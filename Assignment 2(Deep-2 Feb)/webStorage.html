@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn about web storage</title>
+    <!-- sessionStorage is similar to localStorage ; the difference is that while data in localStorage doesn't expire, data in sessionStorage is cleared when the page session ends i.e when we close that tab -->
+</head>
+<body>
+    <!-- web storage section -->
+    <!-- better than cookies because cookie send data to the server and takes it from there and can store limited data -->
+    <!-- both works like key-value pair -->
+    <section class="s1">
+       <h1>practice for web storage</h1>
+    </section>
+</body>
+<script>
+     localStorage.setItem("name","deep") //to set the key-value pair in local storage-->
+        sessionStorage.setItem("name","deep")// <!--to set the key-value pair in session storage-->
+       const value =  localStorage.getItem("name") //<!--to get the value using key in local storage-->
+       const value1 =  sessionStorage.getItem("name")// <!--to get the value using keys in session storage-->
+       console.log(value, value1);
+</script>
+</html>

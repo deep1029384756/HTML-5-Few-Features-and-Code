@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice Target</title>
+</head>
+<body>
+    <section class="s1">
+        <div class="d1">
+            <a href="https://youtube.com/" target="_blank">yb</a> <!--it will always open a new tab-->
+            <br>
+            <a href="https://youtube.com/" target="frame1">yff</a> <!--it will open once a new tab then will be redirected to that tab-->
+            <br>
+            <a href="https://youtube.com/" target="frame2">yf</a> <!--it is opening the tab in the mentioned frame-->
+            <br>
+            <iframe src="##" frameborder="1" height="500" width="500" name="frame2"><iframe src="test.html" frameborder="1" height="300" width="300" name ="framechild"></iframe></iframe>
+            <br>
+            <a href="https://youtube.com/" target="_parent">yp</a> <!--it will open in parent frame in case of nested frames-->
+            <br>
+            <a href="https://youtube.com/" target="_top">yt</a> <!-- it open in the top frame in case of nested frames-->
+        </div>
+    </section>
+</body>
+</html>
+<!-- for more info on target -->
+<!-- https://stackoverflow.com/questions/18470097/difference-between-self-top-and-parent-in-the-anchor-tag-target-attribute -->

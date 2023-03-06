@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geolocationapi</title>
+</head>
+<!-- we can get location of user in terms of longitude and latitude by extracting them, can be use to detect weather -->
+<body>
+    <p>Trying getting the location of the user.</p>
+    <button onclick="getLocation()">GET LOCATION</button>
+    <p id="display"></p>
+</body>
+<script>
+    var a = document.getElementById("display");
+    function getLocation(){
+    if(navigator.geolocation){ //it pops us to allow the location
+        navigator.geolocation.getCurrentPosition(showPosition); //if allowed then get the current postion
+    }else{
+        a.innerhtml = "sorry buddy"; //if not allowed
+    }
+}
+function showPosition(pos){
+    console.log(pos)
+    a.innerHTML = "Longit: "+ pos.coords.longitude + "Latitude: "+ pos.coords.latitude; //getting the longitude and latitudes and showing them to web pages
+}
+</script>
+</html>
